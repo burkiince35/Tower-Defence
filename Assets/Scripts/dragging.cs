@@ -7,6 +7,11 @@ public class dragging : MonoBehaviour
 {
     private Vector3 mOffset;
     private float mZCoord;
+    int ID;
+    private void Start()
+    {
+        ID = GetInstanceID();
+    }
     private void OnMouseDown()
     {
         mZCoord = Camera.main.WorldToScreenPoint(gameObject.transform.position).z;
@@ -25,8 +30,15 @@ public class dragging : MonoBehaviour
         transform.position = GetMouseWorldPos() + mOffset;
     }
 
-    private void OnTriggerStay(Collider other)
+    private void OnCollisionEnter(Collision collision)
     {
-        Destroy(other.gameObject);
+        if (collision.gameObject.CompareTag("cube"))
+        {
+            if (ID<collision.gameObject.GetComponent<dragging>().ID)
+            {
+                return;
+            }
+            Debug.Log("çarptý");
+        }
     }
 }
