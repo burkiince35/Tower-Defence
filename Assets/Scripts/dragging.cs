@@ -7,6 +7,7 @@ public class dragging : MonoBehaviour
 {
     private Vector3 mOffset;
     private float mZCoord;
+    public GameObject mergedObject;
     int ID;
     private void Start()
     {
@@ -38,7 +39,10 @@ public class dragging : MonoBehaviour
             {
                 return;
             }
-            Debug.Log("çarptý");
+            Debug.Log($"Sending from {gameObject.name} with ID number: {ID}");
+            GameObject o = Instantiate(mergedObject, transform.position, Quaternion.identity) as GameObject;
+            Destroy(collision.gameObject);
+            Destroy(gameObject);
         }
     }
 }
