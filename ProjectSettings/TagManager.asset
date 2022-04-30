@@ -6,6 +6,7 @@ TagManager:
   tags:
   - cube
   - enemy
+  - particle
   layers:
   - Default
   - TransparentFX
