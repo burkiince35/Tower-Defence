@@ -4,6 +4,7 @@ public class BuildManager : MonoBehaviour
 {
     private GameObject turretToBuild;
     public GameObject standartTurretPrefab;
+    public GameObject AnotherTurretPrefab;
 
     public static BuildManager instance;
 
@@ -17,11 +18,11 @@ public class BuildManager : MonoBehaviour
         instance = this;
         
     }
-    public void Start()
+    public void SetTurretToBuild(GameObject turret)
     {
-        turretToBuild = standartTurretPrefab;
+        turretToBuild = turret;
     }
-    public GameObject GetTurretToBuild()
+    public GameObject GetTurretToBuild() // içinde spawnlancak olan objeyi döndürüyor.
     {
         return turretToBuild;
     }
