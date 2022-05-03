@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 5670775720020343064}
   - component: {fileID: 3472428043572277429}
   - component: {fileID: 3922644134232283105}
-  - component: {fileID: 2957433996087161707}
+  - component: {fileID: -4903200410430592367}
   m_Layer: 0
   m_Name: Node
   m_TagString: Untagged
@@ -84,7 +84,7 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &2957433996087161707
+--- !u!114 &-4903200410430592367
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -96,5 +96,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ff9194702a2684242b735fc59794d1e4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hoverColor: {r: 0.39822552, g: 0.8962264, b: 0.15641688, a: 0}
-  turret: {fileID: 3870547226600343064, guid: 36a9715853df2dd49a28ead25f14266b, type: 3}
+  hoverColor: {r: 0.35817283, g: 0.6603774, b: 0.14640442, a: 0}

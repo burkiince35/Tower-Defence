@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class BuildManager : MonoBehaviour
 {
-    public GameObject turretToBuild;
-    private GameObject standartTurretPrefab;
+    private GameObject turretToBuild;
+    public GameObject standartTurretPrefab;
 
     public static BuildManager instance;
 
