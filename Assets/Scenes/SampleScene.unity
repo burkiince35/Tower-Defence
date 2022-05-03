@@ -2662,6 +2662,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d534b1f9140e9e641823727bef7d40af, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  standartTurret:
+    prefab: {fileID: 3870547226600343064, guid: 36a9715853df2dd49a28ead25f14266b,
+      type: 3}
+    cost: 100
+  MissileLauncher:
+    prefab: {fileID: 2513715981271286221, guid: d90be41896be7bf44a515166b0d9f3be,
+      type: 3}
+    cost: 300
 --- !u!1001 &2082300215
 PrefabInstance:
   m_ObjectHideFlags: 0

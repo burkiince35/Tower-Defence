@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BuildManager : MonoBehaviour
 {
-    private GameObject turretToBuild;
+    private TurretBlueprint turretToBuild;
     public GameObject standartTurretPrefab;
     public GameObject MissileLauncherPrefab;
 
@@ -18,12 +18,15 @@ public class BuildManager : MonoBehaviour
         instance = this;
         
     }
-    public void SetTurretToBuild(GameObject turret)
+    public void SelectTurretToBuild(TurretBlueprint turret)
     {
         turretToBuild = turret;
     }
-    public GameObject GetTurretToBuild() // içinde spawnlancak olan objeyi döndürüyor.
+    public bool CanBuild{ get { return turretToBuild != null;}  }
+
+    public void BuildTurretOn(Node node)
     {
-        return turretToBuild;
+        GameObject turret = (GameObject) Instantiate(turretToBuild.prefab, node.transform.position + node.GetBuildPosition(), Quaternion.identity);
+        node.turret = turret;
     }
 }

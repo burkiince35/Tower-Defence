@@ -3,11 +3,14 @@ using UnityEngine;
 public class Node : MonoBehaviour
 {
     public Color hoverColor;
-    private Color startColor;
+    public Vector3 positionOffset;
+
+    [Header("optional")]
     private Renderer rend;
+    private Color startColor;
 
-    private GameObject turret;
-
+    public GameObject turret;
+    
     BuildManager buildmanager;
     private void Start()
     {
@@ -18,7 +21,7 @@ public class Node : MonoBehaviour
 
     private void OnMouseDown() // node a basýnca turret spawnlýyor.
     {
-        if (buildmanager.GetTurretToBuild()==null) // herhangi turret butonuna basýlmadýysa node a basýnca biþi olmayacak.
+        if (!buildmanager.CanBuild) // herhangi turret butonuna basýlmadýysa node a basýnca biþi olmayacak.
         {
             return;
         }
@@ -26,12 +29,11 @@ public class Node : MonoBehaviour
         {
             return;
         }
-        GameObject turretToBuild = buildmanager.GetTurretToBuild(); // build manager içindeki gameobject çaðrýlýyor.
-        turret = (GameObject)Instantiate(turretToBuild, transform.position, transform.rotation);
+        buildmanager.BuildTurretOn(this);
     }
     private void OnMouseEnter() // node un üzerine geldiðimizde rengi deðþiyor.
     {
-        if (buildmanager.GetTurretToBuild() == null)
+        if (!buildmanager.CanBuild)
         {
             return;
         }
@@ -41,5 +43,10 @@ public class Node : MonoBehaviour
     private void OnMouseExit() // üzerinden çýkýnca da rengi tekrardan eski halini alýyor.
     {
         rend.material.color = startColor;
+    }
+
+    public Vector3 GetBuildPosition()
+    {
+        return transform.position + positionOffset;
     }
 }
