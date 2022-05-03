@@ -304,6 +304,22 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 2002211156}
     m_Modifications:
+    - target: {fileID: 5038792880349070550, guid: 31c3b8c9827f15041ae995b3957666a7,
+        type: 3}
+      propertyPath: m_PreferredWidth
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038792880349070550, guid: 31c3b8c9827f15041ae995b3957666a7,
+        type: 3}
+      propertyPath: m_PreferredHeight
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5038792880349070552, guid: 31c3b8c9827f15041ae995b3957666a7,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: ea3a8a6eea8127447a24de975dcfb89d,
+        type: 3}
     - target: {fileID: 5038792880349070552, guid: 31c3b8c9827f15041ae995b3957666a7,
         type: 3}
       propertyPath: m_Color.b
@@ -357,12 +373,12 @@ PrefabInstance:
     - target: {fileID: 5038792880349070554, guid: 31c3b8c9827f15041ae995b3957666a7,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 113.3
+      value: 96.02
       objectReference: {fileID: 0}
     - target: {fileID: 5038792880349070554, guid: 31c3b8c9827f15041ae995b3957666a7,
         type: 3}
       propertyPath: m_SizeDelta.y
-      value: 118.9
+      value: 91.2
       objectReference: {fileID: 0}
     - target: {fileID: 5038792880349070554, guid: 31c3b8c9827f15041ae995b3957666a7,
         type: 3}
@@ -432,12 +448,12 @@ PrefabInstance:
     - target: {fileID: 5038792880349070555, guid: 31c3b8c9827f15041ae995b3957666a7,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
-      value: PurchaseAnotherTurret
+      value: PurchaseMissileLauncher
       objectReference: {fileID: 0}
     - target: {fileID: 5038792880349070557, guid: 31c3b8c9827f15041ae995b3957666a7,
         type: 3}
       propertyPath: m_Name
-      value: AnotherTurretItem
+      value: MissileLauncherItem
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31c3b8c9827f15041ae995b3957666a7, type: 3}
@@ -983,6 +999,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   standartTurretPrefab: {fileID: 3870547226600343064, guid: 36a9715853df2dd49a28ead25f14266b,
+    type: 3}
+  MissileLauncherPrefab: {fileID: 2513715981271286221, guid: d90be41896be7bf44a515166b0d9f3be,
     type: 3}
 --- !u!1001 &595059153
 PrefabInstance:

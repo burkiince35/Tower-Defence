@@ -13,9 +13,9 @@ public class Shop : MonoBehaviour
         Debug.Log("standart turret purchased");
         buildmanager.SetTurretToBuild(buildmanager.standartTurretPrefab);
     } 
-    public void PurchaseAnotherTurret()
+    public void PurchaseMissileLauncher()
     {
-        Debug.Log("Another turret purchased");
-        buildmanager.SetTurretToBuild(buildmanager.AnotherTurretPrefab);
+        Debug.Log("Missile Launcher purchased");
+        buildmanager.SetTurretToBuild(buildmanager.MissileLauncherPrefab);
     }
 }
