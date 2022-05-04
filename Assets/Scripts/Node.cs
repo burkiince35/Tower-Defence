@@ -6,10 +6,12 @@ public class Node : MonoBehaviour
     public Vector3 positionOffset;
 
     [Header("optional")]
+    public GameObject turret;
+
     private Renderer rend;
     private Color startColor;
 
-    public GameObject turret;
+    
     
     BuildManager buildmanager;
     private void Start()
