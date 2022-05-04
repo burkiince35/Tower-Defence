@@ -97,3 +97,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hoverColor: {r: 0.35817283, g: 0.6603774, b: 0.14640442, a: 0}
+  notEnoughMoneyColor: {r: 0.9245283, g: 0.11774653, b: 0.11774653, a: 0}
+  positionOffset: {x: 0, y: 0, z: 0}
+  turret: {fileID: 0}

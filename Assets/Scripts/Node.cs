@@ -3,6 +3,7 @@ using UnityEngine;
 public class Node : MonoBehaviour
 {
     public Color hoverColor;
+    public Color notEnoughMoneyColor;
     public Vector3 positionOffset;
 
     [Header("optional")]
@@ -39,7 +40,15 @@ public class Node : MonoBehaviour
         {
             return;
         }
-        rend.material.color = hoverColor;
+        if (buildmanager.HasMoney)
+        {
+            rend.material.color = hoverColor;
+        }
+        else
+        {
+            rend.material.color = notEnoughMoneyColor;
+        }
+        
     }
 
     private void OnMouseExit() // üzerinden çýkýnca da rengi tekrardan eski halini alýyor.
