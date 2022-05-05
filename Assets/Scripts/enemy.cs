@@ -10,6 +10,8 @@ public class enemy : MonoBehaviour
     private int wavepointIndex = 0;
     public int health = 100;
     public int moneyGain = 50;
+
+    public GameObject deathEffect;
     private void Start()
     {
         target = waypoints.points[0];
@@ -36,6 +38,10 @@ public class enemy : MonoBehaviour
     private void Die()
     {
         PlayerStats.money += moneyGain;
+
+        GameObject effect = (GameObject) Instantiate(deathEffect, transform.position, Quaternion.identity);
+        Destroy(effect, 4f);
+        
         Destroy(gameObject);
     }
 
