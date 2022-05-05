@@ -49,6 +49,7 @@ MonoBehaviour:
   speed: 15
   impactEffect: {fileID: 1224750015943189406, guid: 0c7f039bd44be614a962a506f0ae6e49,
     type: 3}
+  damageAmount: 50
 --- !u!1 &5982304688095647256
 GameObject:
   m_ObjectHideFlags: 0

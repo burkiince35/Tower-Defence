@@ -36,7 +36,7 @@ public class BuildManager : MonoBehaviour
         GameObject turret = (GameObject) Instantiate(turretToBuild.prefab, node.GetBuildPosition(), Quaternion.identity);
         node.turret = turret;
         GameObject effect = (GameObject) Instantiate(buildEffect, node.GetBuildPosition(), Quaternion.identity);
-        Destroy(effect, 5f);
+        Destroy(effect, 4f);
         Debug.Log("turret build! Money left:" + PlayerStats.money);
     }
 }
