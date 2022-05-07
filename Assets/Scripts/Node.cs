@@ -24,11 +24,13 @@ public class Node : MonoBehaviour
 
     private void OnMouseDown() // node a basýnca turret spawnlýyor.
     {
-        if (!buildmanager.CanBuild) // herhangi turret butonuna basýlmadýysa node a basýnca biþi olmayacak.
+       
+        if (turret!=null)
         {
+            buildmanager.SelectNode(this);
             return;
         }
-        if (turret!=null)
+        if (!buildmanager.CanBuild) // herhangi turret butonuna basýlmadýysa node a basýnca biþi olmayacak.
         {
             return;
         }
