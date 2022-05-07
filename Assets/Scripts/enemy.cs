@@ -5,28 +5,19 @@ using UnityEngine;
 
 public class enemy : MonoBehaviour
 {
-    public float speed = 5f;
-    private Transform target;
-    private int wavepointIndex = 0;
-    public int health = 100;
-    public int moneyGain = 50;
+    public float startSpeed = 5f;
+    [HideInInspector]
+    public float speed;
+    public float health = 100;
+    public int Worth = 50;
 
     public GameObject deathEffect;
+
     private void Start()
     {
-        target = waypoints.points[0];
+        speed = startSpeed;
     }
-
-    private void Update()
-    {
-        Vector3 dir = target.position - transform.position;
-        transform.Translate(dir.normalized*speed*Time.deltaTime,Space.World);
-        if (Vector3.Distance(transform.position, target.position)<=0.2f)
-        {
-            GetNextWayPoint();
-        }
-    }
-    public void TakeDamage(int amount)
+    public void TakeDamage(float amount)
     {
         health -= amount;
         if (health <= 0)
@@ -35,30 +26,17 @@ public class enemy : MonoBehaviour
         }
     }
 
+    public void Slow(float pct)
+    {
+        speed = startSpeed*(1f - pct);
+    }
     private void Die()
     {
-        PlayerStats.money += moneyGain;
+        PlayerStats.money += Worth;
 
         GameObject effect = (GameObject) Instantiate(deathEffect, transform.position, Quaternion.identity);
         Destroy(effect, 4f);
         
-        Destroy(gameObject);
-    }
-
-    private void GetNextWayPoint()
-    {
-        if (wavepointIndex >= waypoints.points.Length-1)
-        {
-            EndPath();
-            return;
-        }
-        wavepointIndex++;
-        target = waypoints.points[wavepointIndex];
-    }
-
-    void EndPath()
-    {
-        PlayerStats.Lives--;
         Destroy(gameObject);
     }
 }
