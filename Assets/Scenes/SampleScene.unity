@@ -756,7 +756,6 @@ GameObject:
   - component: {fileID: 238112909}
   - component: {fileID: 238112908}
   - component: {fileID: 238112907}
-  - component: {fileID: 238112906}
   m_Layer: 5
   m_Name: TopCanvas
   m_TagString: Untagged
@@ -764,23 +763,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &238112906
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 238112905}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!114 &238112907
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1048,7 +1030,6 @@ GameObject:
   - component: {fileID: 365851974}
   - component: {fileID: 365851973}
   - component: {fileID: 365851972}
-  - component: {fileID: 365851971}
   m_Layer: 5
   m_Name: BottomCanvas
   m_TagString: Untagged
@@ -1056,23 +1037,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &365851971
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 365851970}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
 --- !u!114 &365851972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4129,7 +4093,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1580662459}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 190254341}
+        m_TargetAssemblyTypeName: NodeUI, Assembly-CSharp
+        m_MethodName: Upgrade
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1580662459
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5854,15 +5830,22 @@ MonoBehaviour:
   standartTurret:
     prefab: {fileID: 3870547226600343064, guid: 36a9715853df2dd49a28ead25f14266b,
       type: 3}
+    Upgradedprefab: {fileID: 3870547226600343064, guid: 8bbc17e6261078643bb3e70fb0efeab9,
+      type: 3}
     cost: 100
+    Upgradecost: 200
   MissileLauncher:
     prefab: {fileID: 2513715981271286221, guid: d90be41896be7bf44a515166b0d9f3be,
       type: 3}
+    Upgradedprefab: {fileID: 0}
     cost: 300
+    Upgradecost: 0
   LaserBeamer:
     prefab: {fileID: 3533763329962169205, guid: bd260b772bf72d84a96d66742d7cfd82,
       type: 3}
+    Upgradedprefab: {fileID: 0}
     cost: 400
+    Upgradecost: 0
 --- !u!1 &2018674608
 GameObject:
   m_ObjectHideFlags: 0
